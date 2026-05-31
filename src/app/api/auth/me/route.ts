@@ -1,20 +1,18 @@
 import { NextResponse } from "next/server";
-import { getSession } from "@/lib/auth";
+import { currentUser } from "@clerk/nextjs/server";
 
 export async function GET() {
   try {
-    const session = await getSession();
-    if (!session.userId) {
-      return NextResponse.json({ user: null }, { status: 401 });
+    const user = await currentUser();
+    if (!user) {
+      return NextResponse.json({ message: "Unauthorized" }, { status: 401 });
     }
 
     return NextResponse.json({
-      user: {
-        id: session.userId,
-        email: session.email,
-      },
+      id: user.id,
+      email: user.emailAddresses[0]?.emailAddress,
     });
   } catch {
-    return NextResponse.json({ user: null }, { status: 401 });
+    return NextResponse.json({ message: "Internal server error" }, { status: 500 });
   }
 }

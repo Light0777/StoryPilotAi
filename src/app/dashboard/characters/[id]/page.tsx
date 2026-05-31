@@ -81,7 +81,7 @@ export default function CharacterDetailPage() {
             <ArrowLeft className="h-4 w-4" /> Back
           </Button>
         </Link>
-        <h1 className="text-3xl font-bold">Character not found</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl">Character not found</h1>
       </div>
     );
   }

@@ -4,7 +4,7 @@ export default function NewCharacterPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Create Character</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl">Create Character</h1>
         <p className="text-muted-foreground">
           Set up a new AI character for story generation
         </p>

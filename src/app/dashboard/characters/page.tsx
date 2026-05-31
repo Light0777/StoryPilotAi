@@ -123,9 +123,9 @@ export default function CharactersPage() {
   if (loading) {
     return (
       <div className="space-y-6">
-        <div className="flex items-center justify-between">
+        <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
           <div>
-            <h1 className="text-3xl font-bold">Characters</h1>
+            <h1 className="text-2xl font-bold sm:text-3xl">Characters</h1>
             <p className="text-muted-foreground">Manage your AI characters</p>
           </div>
         </div>
@@ -140,9 +140,9 @@ export default function CharactersPage() {
 
   return (
     <div className="space-y-6">
-      <div className="flex items-center justify-between">
+      <div className="flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
         <div>
-          <h1 className="text-3xl font-bold">Characters</h1>
+          <h1 className="text-2xl font-bold sm:text-3xl">Characters</h1>
           <p className="text-muted-foreground">Manage your AI characters</p>
         </div>
         <Link href="/dashboard/characters/new">

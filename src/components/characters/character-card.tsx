@@ -68,7 +68,7 @@ export function CharacterCard({ character, onToggleStatus, onDelete, onGenerate,
           </p>
         </div>
       </CardContent>
-      <CardFooter className="gap-2">
+      <CardFooter className="flex-wrap gap-2">
         <Button
           variant="default"
           size="sm"

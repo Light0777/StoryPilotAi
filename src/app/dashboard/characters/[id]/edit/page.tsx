@@ -30,7 +30,7 @@ export default function EditCharacterPage() {
   if (!character) {
     return (
       <div className="space-y-6">
-        <h1 className="text-3xl font-bold">Character not found</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl">Character not found</h1>
         <p className="text-muted-foreground">The character you are looking for does not exist.</p>
       </div>
     );
@@ -39,7 +39,7 @@ export default function EditCharacterPage() {
   return (
     <div className="space-y-6">
       <div>
-        <h1 className="text-3xl font-bold">Edit Character</h1>
+        <h1 className="text-2xl font-bold sm:text-3xl">Edit Character</h1>
         <p className="text-muted-foreground">Update character details</p>
       </div>
       <CharacterForm
